@@ -41,4 +41,9 @@ public class Character : MonoBehaviour
         anim.SetBool("Die", true);
     }
 
+    public void DrawAnim()
+    {
+        anim.SetTrigger("Draw");
+    }
+
 }

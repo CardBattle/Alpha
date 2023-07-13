@@ -229,6 +229,9 @@ public class BattleManager : MonoBehaviour
             playerDice = 0;
             enemyDice = 0;
 
+            player.DrawAnim();
+            enemy.DrawAnim();
+
             StartCoroutine(CardSorting());
             return;
         }
