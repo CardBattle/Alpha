@@ -27,10 +27,23 @@ public class Character : MonoBehaviour
 
     public List<GameObject> cards; //카드 매니저에서 캐릭터가 소유한 카드 프리팹을 접근해야하기 때문에 public
 
+    Animator anim;
+
     public void Init()
     {
         buffs = new List<Buff>();
         info = new(id, _name, level, hp, attackDmg, defense, cards, buffs, weapon, img);
+        anim = GetComponent<Animator>();
+    }
+
+    public void DieAnim()
+    {
+        anim.SetBool("Die", true);
+    }
+
+    public void DrawAnim()
+    {
+        anim.SetTrigger("Draw");
     }
 
 }
