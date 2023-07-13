@@ -359,6 +359,7 @@ AnimationClip:
     m_KeepOriginalPositionY: 1
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
+
     m_Mirror: 0
   m_EditorCurves:
   - curve:
@@ -384,6 +385,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -393,6 +395,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5833333
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -403,8 +406,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+
     attribute: localEulerAnglesRaw.x
     path: body
+
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -412,6 +417,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -421,6 +427,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.3
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -430,6 +437,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -439,6 +447,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5833333
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -449,6 +458,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+
     attribute: localEulerAnglesRaw.y
     path: body
     classID: 4
@@ -458,6 +468,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -467,6 +478,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.3
+
         value: -14.577001
         inSlope: 0
         outSlope: 0
@@ -476,6 +488,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
+
         value: 14.309001
         inSlope: 0
         outSlope: 0
@@ -485,6 +498,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5833333
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -495,6 +509,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+
     attribute: localEulerAnglesRaw.z
     path: body
     classID: 4
@@ -504,6 +519,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -513,6 +529,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.3
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -522,6 +539,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -531,6 +549,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5833333
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -541,6 +560,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+
     attribute: localEulerAnglesRaw.x
     path: Leg
     classID: 4
@@ -550,6 +570,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -559,6 +580,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.3
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -568,6 +590,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -577,6 +600,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5833333
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -587,8 +611,10 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+
     attribute: localEulerAnglesRaw.y
     path: Leg
+
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -596,6 +622,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -605,6 +632,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.3
+
         value: -51.042004
         inSlope: 0
         outSlope: 0
@@ -614,6 +642,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.41666666
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -623,6 +652,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.5833333
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -633,6 +663,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
+
     attribute: localEulerAnglesRaw.z
     path: Leg
     classID: 4
@@ -1167,6 +1198,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: 1.6
         inSlope: 0
         outSlope: 0
@@ -1178,6 +1210,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
+
     path: 
     classID: 4
     script: {fileID: 0}
@@ -1186,6 +1219,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: -3.5
         inSlope: 0
         outSlope: 0
@@ -1197,6 +1231,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
+
     path: 
     classID: 4
     script: {fileID: 0}
@@ -1205,6 +1240,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1216,6 +1252,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
+
     path: 
     classID: 4
     script: {fileID: 0}
@@ -1370,6 +1407,7 @@ AnimationClip:
     path: body/Shield
     classID: 4
     script: {fileID: 0}
+
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []

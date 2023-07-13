@@ -101,6 +101,12 @@ public class BattleManager : MonoBehaviour
     [SerializeField]
     private Slider enemyHpSlider; // 적 hp 슬라이더
     [SerializeField]
+    private Text playerHpView; // 플레이어 hp 표시
+    [SerializeField]
+    private Text enemyHpView; // 플레이어 hp 표시
+
+
+    [SerializeField]
     private TextMeshPro timerText; //타이머 텍스트
 
     private void Awake()
@@ -115,6 +121,10 @@ public class BattleManager : MonoBehaviour
 
         playerHpSlider.maxValue = player.info.MaxHp;
         enemyHpSlider.maxValue = enemy.info.MaxHp;
+
+        playerHpView.text = player.info.MaxHp.ToString();
+        enemyHpView.text = enemy.info.MaxHp.ToString();
+
 
         playerHpSlider.value = player.info.Hp;
         enemyHpSlider.value = enemy.info.Hp;
@@ -243,6 +253,11 @@ public class BattleManager : MonoBehaviour
         playerHpSlider.value = player.info.Hp;
         enemyHpSlider.value = enemy.info.Hp;
 
+        playerHpView.text = player.info.Hp.ToString();
+        enemyHpView.text = enemy.info.Hp.ToString();
+
+
+
         Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
         playerDice = 0;
@@ -266,6 +281,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
@@ -281,6 +298,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
@@ -314,6 +333,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
@@ -330,6 +351,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
@@ -365,6 +388,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
@@ -385,6 +410,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
@@ -416,6 +443,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
@@ -434,6 +463,8 @@ public class BattleManager : MonoBehaviour
 
                     playerHpSlider.value = player.info.Hp;
                     enemyHpSlider.value = enemy.info.Hp;
+                    playerHpView.text = player.info.Hp.ToString();
+                    enemyHpView.text = enemy.info.Hp.ToString();
 
                     Debug.Log($"CardUse 결과: 플레이어Hp:{player.info.Hp}\n에너미Hp:{enemy.info.Hp}");
 
