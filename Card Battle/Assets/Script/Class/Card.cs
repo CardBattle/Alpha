@@ -19,11 +19,28 @@ public class Card : MonoBehaviour
     [SerializeField]
     private string _name;
     [SerializeField]
+    private string _buff;
+    [SerializeField]
     private int effVal;
     [SerializeField]
     private int level;
     [SerializeField]
-    private Sprite img;
+    private Sprite cardSpaceimg;
+    [SerializeField]
+    private Sprite cardimg;
+    [SerializeField]
+    private Sprite cardTypeSpaceimg;
+    [SerializeField]
+    private Sprite cardNameSpaceimg;
+    [SerializeField]
+    private Sprite cardBuffimg;
+    [SerializeField]
+    private Sprite cardLevelimg;
+    [SerializeField]
+    private Sprite cardTypeimg;
+    [SerializeField]
+    private Sprite cardEffValimg;
+
     [SerializeField]
     private Sprite frontCard;
     [SerializeField]
@@ -32,12 +49,29 @@ public class Card : MonoBehaviour
     private List<Buff> buffs;
 
     [SerializeField]
-    private SpriteRenderer cardimg;
+    private SpriteRenderer CardSpaceimg;
+    [SerializeField]
+    private SpriteRenderer Cardimg;
+    [SerializeField]
+    private SpriteRenderer CardLevelimg;
+    [SerializeField]
+    private SpriteRenderer CardNameSpaceimg;
+    [SerializeField]
+    private SpriteRenderer CardTypeSpaceimg;
+    [SerializeField]
+    private SpriteRenderer CardTypeimg;
+    [SerializeField]
+    private SpriteRenderer CardBuffimg;
+    [SerializeField]
+    private SpriteRenderer CardEffValimg;
     [SerializeField]
     private TextMeshPro _Name;
     [SerializeField]
-    private TextMeshPro effect;
-
+    private TextMeshPro EffVal;
+    [SerializeField]
+    private TextMeshPro Buff;
+    [SerializeField]
+    private TextMeshPro Level;
     // 내 카드인지 아닌지 체크하는 변수
     private bool myCard;
 
@@ -56,15 +90,22 @@ public class Card : MonoBehaviour
             if (buff != null)
                 buff.Init();
         }
-        info = new(id, property, type, _name, buffs, effVal, img);
+        info = new(id, property, type, _name, buffs, effVal, cardimg);
 
         GetComponent<CardUse>().Init();
     }
 
+    private void OnMouseEnter()
+    {
+        if (myCard && BattleManager.Bm.state != BattleManager.State.CardDecision)
+            BattleManager.Bm.CardMouseEnter();
+    }
     private void OnMouseOver()
     {
         if (myCard && BattleManager.Bm.state != BattleManager.State.CardDecision)
             BattleManager.Bm.CardMouseOver(this);
+        else
+            BattleManager.Bm.CardMouseExit(this);
     }
     private void OnMouseExit()
     {
@@ -92,24 +133,49 @@ public class Card : MonoBehaviour
 
         if (myCard)
         {
-            cardimg.sprite = img;
+            gameObject.GetComponent<SpriteRenderer>().sprite = frontCard;
+            CardSpaceimg.sprite = cardSpaceimg;
+            Cardimg.sprite = cardimg;
+            CardNameSpaceimg.sprite = cardNameSpaceimg;
+            CardBuffimg.sprite = cardBuffimg;
+            CardLevelimg.sprite = cardLevelimg;
+            CardEffValimg.sprite = cardEffValimg;
+            CardTypeSpaceimg.sprite = cardTypeSpaceimg;
+            CardTypeimg.sprite = cardTypeimg;
+            
+           
             _Name.text = _name;
-            effect.text = effVal.ToString();
+            Buff.text = _buff;
+            Level.text = level.ToString();
+            EffVal.text = effVal.ToString();        
         }
         else
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = backCard;
             _Name.text = " ";
-            effect.text = " ";
+            EffVal.text = " ";
+            Buff.text = " ";
+            Level.text = " ";         
         }
     }
 
     public void EnemyCardFront()
     {
         gameObject.GetComponent<SpriteRenderer>().sprite = frontCard;
-        cardimg.sprite = img;
+        CardSpaceimg.sprite = cardSpaceimg;
+        Cardimg.sprite = cardimg;
+        CardNameSpaceimg.sprite = cardNameSpaceimg;
+        CardBuffimg.sprite = cardBuffimg;
+        CardLevelimg.sprite = cardLevelimg;
+        CardEffValimg.sprite = cardEffValimg;
+        CardTypeSpaceimg.sprite = cardTypeSpaceimg;
+        CardTypeimg.sprite = cardTypeimg;
+
+
         _Name.text = _name;
-        effect.text = effVal.ToString();
+        Buff.text = _buff;
+        Level.text = level.ToString();
+        EffVal.text = effVal.ToString();
     }
     public void MoveTransform(PRS prs, bool useDotween, float dotweenTime = 0)
     {

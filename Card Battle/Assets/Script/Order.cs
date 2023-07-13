@@ -21,7 +21,7 @@ public class Order : MonoBehaviour
 
         if (drag)
         {
-            SettingOrder(100);
+            SettingOrder(1000);
         }
         if (!drag)
         {
@@ -31,7 +31,7 @@ public class Order : MonoBehaviour
 
     public void SettingOrder(int order)
     {
-        int mulOrder = order * 10;
+        int mulOrder = order * 20;
 
         foreach (var renderer in backOrders)
         {
@@ -42,7 +42,7 @@ public class Order : MonoBehaviour
         foreach (var renderer in frontOrders)
         {
             renderer.sortingLayerName = sortingLayerName;
-            renderer.sortingOrder = mulOrder + 1;
+            renderer.sortingOrder = ++mulOrder;          
         }
     }
 
