@@ -95,10 +95,17 @@ public class Card : MonoBehaviour
         GetComponent<CardUse>().Init();
     }
 
+    private void OnMouseEnter()
+    {
+        if (myCard && BattleManager.Bm.state != BattleManager.State.CardDecision)
+            BattleManager.Bm.CardMouseEnter();
+    }
     private void OnMouseOver()
     {
         if (myCard && BattleManager.Bm.state != BattleManager.State.CardDecision)
             BattleManager.Bm.CardMouseOver(this);
+        else
+            BattleManager.Bm.CardMouseExit(this);
     }
     private void OnMouseExit()
     {

@@ -24,6 +24,18 @@ public class BattleManager : MonoBehaviour
         DestroyCard,
     }
 
+    [SerializeField]
+    private AudioSource battleManagerAudio;
+    [SerializeField]
+    private AudioSource battleManagerAudio2;
+    [SerializeField]
+    private AudioClip cardDrawClip;
+    [SerializeField]
+    private AudioClip cardDragClip;
+    [SerializeField]
+    private AudioClip cardClickClip;
+
+
     //플레이어, 적 정보와 덱 체크
     [SerializeField]
     private Character player;
@@ -494,6 +506,9 @@ public class BattleManager : MonoBehaviour
         if (state == State.CardDecision)
             return;
 
+        battleManagerAudio.clip = cardClickClip;
+        battleManagerAudio.Play();
+
         if (state == State.WaitState)
         {
             selectCard = card;
@@ -526,13 +541,21 @@ public class BattleManager : MonoBehaviour
 
     public void CardSelectDown(Card card)
     {
+        battleManagerAudio.clip = cardClickClip;
+        battleManagerAudio.PlayOneShot(cardClickClip);
+
         selectCard.originPRS = originalPlace;
         card.MoveTransform(card.originPRS, false);
 
         card.cardSelect = false;
     }
-    public void CardMouseOver(Card card)
+    public void CardMouseEnter()
     {
+        battleManagerAudio2.clip = cardDragClip;
+        battleManagerAudio2.Play();
+    }
+    public void CardMouseOver(Card card)
+    {         
         card.GetComponent<Order>().DragOrder(true);
 
     }
@@ -716,6 +739,8 @@ public class BattleManager : MonoBehaviour
 
     void Add(bool myCard)
     {
+        battleManagerAudio.clip = cardDrawClip;
+        battleManagerAudio.Play();
         if (myCard && playerDeck.Count != 0 && playerCards.Count < 9)
         {
             var cardObject = Instantiate(playerDeck[0], new Vector2(myDeckPosition.transform.position.x, myDeckPosition.transform.position.y), Utlis.Qi);
