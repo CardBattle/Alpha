@@ -206,12 +206,12 @@ public class BattleManager : MonoBehaviour
             return;
         }
 
-        if (playerDecision.card != null && playerDecision.card.info.Property == PropertyType.HEEL)
+        if (playerDecision.card != null && playerDecision.card.info.Property == PropertyType.HEAL)
         {
             HeelCard(true);
             return;
         }
-        else if (enemyDecision.card != null && enemyDecision.card.info.Property == PropertyType.HEEL)
+        else if (enemyDecision.card != null && enemyDecision.card.info.Property == PropertyType.HEAL)
         {
             HeelCard(false);
             return;
@@ -228,6 +228,9 @@ public class BattleManager : MonoBehaviour
 
             playerDice = 0;
             enemyDice = 0;
+
+            player.DrawAnim();
+            enemy.DrawAnim();
 
             StartCoroutine(CardSorting());
             return;
@@ -272,7 +275,7 @@ public class BattleManager : MonoBehaviour
                     StartCoroutine(CardSorting());
                     return;
                 }
-                else if (enemyDecision.card.info.Property == PropertyType.HEEL)
+                else if (enemyDecision.card.info.Property == PropertyType.HEAL)
                 {
                     enemyDecision.card.info.use(enemy, player);
 
@@ -320,7 +323,7 @@ public class BattleManager : MonoBehaviour
                     StartCoroutine(CardSorting());
                     return;
                 }
-                else if (playerDecision.card.info.Property == PropertyType.HEEL)
+                else if (playerDecision.card.info.Property == PropertyType.HEAL)
                 {
                     playerDecision.card.info.use(enemy, player);
                     print("플레이어 힐");
@@ -371,7 +374,7 @@ public class BattleManager : MonoBehaviour
                     StartCoroutine(CardSorting());
                     return;
                 }
-                else if (enemyDecision.card.info.Property == PropertyType.HEEL)
+                else if (enemyDecision.card.info.Property == PropertyType.HEAL)
                 {
                     playerDecision.card.info.use(player, enemy);
                     print("플레이어 회복");
@@ -422,7 +425,7 @@ public class BattleManager : MonoBehaviour
                     StartCoroutine(CardSorting());
                     return;
                 }
-                else if (playerDecision.card.info.Property == PropertyType.HEEL)
+                else if (playerDecision.card.info.Property == PropertyType.HEAL)
                 {
                     enemyDecision.card.info.use(enemy, player);
                     print("적 회복");

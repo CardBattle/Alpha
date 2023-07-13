@@ -1,12 +1,18 @@
+using System.Collections;
 using UnityEngine;
-
 public class CardUse : MonoBehaviour
 {
     public Card card;
     public void Init()
     {
         card = GetComponent<Card>();
-        card.info.use = Use;
+        
+        if (card.info.Property == PropertyType.ATTACK)
+            card.info.use += AttackAnim;
+        else card.info.use += DefenseAnim;
+        
+        card.info.use += Use;
+
     }
 
     public virtual void Use(Character sender, Character receiver)
@@ -30,6 +36,24 @@ public class CardUse : MonoBehaviour
                     receiver.info.buffs.Add(buff);
             }
         }
+    }
+
+    protected void AttackAnim(Character sender, Character receiver)
+    {
+        sender.GetComponent<Animator>().SetTrigger("Attack");
+
+        StartCoroutine(HurtAnim(receiver));
+    }
+
+    protected IEnumerator HurtAnim(Character receiver)
+    {
+        yield return new WaitForSeconds(1f);
+        receiver.GetComponent<Animator>().SetTrigger("Hurt");
+    }
+
+    protected void DefenseAnim(Character sender, Character receiver)
+    {
+        sender.GetComponent<Animator>().SetTrigger("Buff");
     }
 
     protected int CalculateDmg(int attackDmg, int dice, int effVal, float effectiveness)
