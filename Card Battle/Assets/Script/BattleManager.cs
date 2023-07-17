@@ -103,6 +103,10 @@ public class BattleManager : MonoBehaviour
     public int playerDice = 0;
     public int enemyDice = 0;
 
+    //전체체력 퍼뎀
+    public int playerHpPercent;
+    public int enemyHpPercent;
+
     // 타이머
     public float timer;
 
@@ -137,6 +141,8 @@ public class BattleManager : MonoBehaviour
         playerHpView.text = player.info.MaxHp.ToString();
         enemyHpView.text = enemy.info.MaxHp.ToString();
 
+        playerHpPercent = player.info.MaxHp / 10;
+        enemyHpPercent = enemy.info.MaxHp / 10;
 
         playerHpSlider.value = player.info.Hp;
         enemyHpSlider.value = enemy.info.Hp;
@@ -738,10 +744,16 @@ public class BattleManager : MonoBehaviour
     {
         if (playerCards.Count == 0 && playerDeck.Count == 0)
         {
+            player.info.Hp -= playerHpPercent;
+            playerHpSlider.value = player.info.Hp;
+            playerHpView.text = player.info.Hp.ToString();
             CardCombine(true);
         }
         if (enemyCards.Count == 0 && enemyDeck.Count == 0)
         {
+            enemy.info.Hp -= enemyHpPercent;
+            enemyHpSlider.value = enemy.info.Hp;
+            enemyHpView.text = enemy.info.Hp.ToString();
             CardCombine(false);
         }
 
