@@ -25,9 +25,30 @@ public class Character : MonoBehaviour
     
     public List<Buff> buffs;
 
+    public Data cardDATA;
+    public CharacterData data;
+
+    
+
     public List<GameObject> cards; //카드 매니저에서 캐릭터가 소유한 카드 프리팹을 접근해야하기 때문에 public
 
+
     Animator anim;
+
+    public void CharDATA()
+    {
+        _name = data.chrName;
+        id = data.chrId;
+        hp = data.chrMaxHp;
+        level = data.chrLv;
+        defense = data.chrDefense;
+        attackDmg = data.chrAttackDmg;
+
+        foreach(var card in data.chrCard)
+        {
+            cards.Add(cardDATA.cardPrefabs[card]);
+        }
+    }
 
     public void Init()
     {

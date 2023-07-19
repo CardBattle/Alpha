@@ -24,6 +24,12 @@ public class BattleManager : MonoBehaviour
         DestroyCard,
     }
 
+    public enum ReadyStart
+    {
+        Ready,
+        Start,
+    }
+
     [SerializeField]
     private AudioSource battleManagerAudio;
     [SerializeField]
@@ -132,6 +138,8 @@ public class BattleManager : MonoBehaviour
             Bm = this;
         }
 
+        player.CharDATA();
+        enemy.CharDATA();
         player.Init();
         enemy.Init();
 
