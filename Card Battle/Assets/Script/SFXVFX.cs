@@ -6,11 +6,18 @@ using UnityEngine;
 public class SFXVFX : MonoBehaviour
 {
     public Action play;
+    public AudioSource drawSFX;
 
     public void PlaySFXVFX() 
     {
         play();
         play = null;
+    }
+
+    public void PlayDrawSFX()
+    {
+        drawSFX = GetComponent<AudioSource>();
+        drawSFX.Play();
     }
 
 }
