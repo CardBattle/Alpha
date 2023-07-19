@@ -927,7 +927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 0}
   sfx: {fileID: 0}
-  vfx: {fileID: 0}
+  vfx: {fileID: 5824670795371433373, guid: f6fd568b816c64943a44efc3add3a881, type: 3}
 --- !u!114 &6467222491020728267
 MonoBehaviour:
   m_ObjectHideFlags: 0

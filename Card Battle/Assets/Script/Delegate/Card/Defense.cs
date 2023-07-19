@@ -26,9 +26,6 @@ public class Defense : CardUse
 
             Debug.Log("EnemyDefense");
         }
-
-
-        
     }
 
 }

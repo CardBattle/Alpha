@@ -48,7 +48,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 0
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -1363,8 +1363,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.3372549, g: 0.3372549, b: 1, a: 0}
-        key1: {r: 0.76470584, g: 0.26737964, b: 1, a: 1}
+        key0: {r: 0.33725488, g: 1, b: 0.4222435, a: 0}
+        key1: {r: 0.26666665, g: 0.5823887, b: 1, a: 1}
         key2: {r: 0.76470584, g: 0.26737964, b: 1, a: 0}
         key3: {r: 1, g: 0.03424205, b: 0, a: 0.039215688}
         key4: {r: 1, g: 0.017601715, b: 0, a: 0.039215688}
@@ -4832,7 +4832,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a81df4963508f8c4e9c854c919c93b67, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4896,7 +4895,7 @@ GameObject:
   - component: {fileID: 5824670795371433375}
   - component: {fileID: 2990870103442498292}
   m_Layer: 0
-  m_Name: CFXR4 Bouncing Glows Bubble (Blue Purple)
+  m_Name: CFXR4 Bouncing Glows Bubble (Green Blue)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5072,8 +5071,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 0.76470584, g: 0.26737964, b: 1, a: 1}
-      maxColor: {r: 0.3372549, g: 0.3372549, b: 1, a: 1}
+      minColor: {r: 0.26666665, g: 0.7711295, b: 1, a: 1}
+      maxColor: {r: 0.33725488, g: 1, b: 0.34631142, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9619,7 +9618,6 @@ ParticleSystemRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: f6516bbddb2a0474cad423886d0f904c, type: 2}
-  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
