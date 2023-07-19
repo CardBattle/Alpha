@@ -225,7 +225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550747758262248542}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05899811, y: 0.47999954, z: -0.1}
+  m_LocalPosition: {x: -0.05899811, y: 0.4799995, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 1553737428216906062}
   - component: {fileID: 1501314690357840584}
   - component: {fileID: 1501314690357840585}
+  - component: {fileID: 978846399460753268}
   m_Layer: 0
   m_Name: Warrior
   m_TagString: Untagged
@@ -363,8 +364,8 @@ MonoBehaviour:
   weapon: 1
   img: {fileID: 21300000, guid: d6a44ab95b0def041a7929981a2c23a1, type: 3}
   buffs: []
-  cardDATA: {fileID: 0}
-  data: {fileID: 0}
+  cardDATA: {fileID: 5207043119744086873, guid: 5a6cd18f8f4105b4aae296cbc7bc594f, type: 3}
+  data: {fileID: 2038502859531863969, guid: 75753aa904219b94a991208126221636, type: 3}
   cards:
   - {fileID: 4078094028994227434, guid: 7510eeca71a308640a5bf49ca3dc98d0, type: 3}
   - {fileID: 4078094028994227434, guid: 7510eeca71a308640a5bf49ca3dc98d0, type: 3}
@@ -378,6 +379,18 @@ MonoBehaviour:
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
+--- !u!114 &978846399460753268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550816134927763680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a510f17be7269cc43b5e69f7412d9501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1550824068029320756
 GameObject:
   m_ObjectHideFlags: 0

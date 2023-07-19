@@ -3,9 +3,14 @@ using UnityEngine;
 public class CardUse : MonoBehaviour
 {
     public Card card;
+    public AudioSource sfx;
+    public GameObject vfx;
+
     public void Init()
     {
         card = GetComponent<Card>();
+
+        sfx = GetComponent<AudioSource>();
         
         if (card.info.Property == PropertyType.ATTACK)
             card.info.use += AttackAnim;
@@ -36,6 +41,17 @@ public class CardUse : MonoBehaviour
                     receiver.info.buffs.Add(buff);
             }
         }
+        sender.GetComponent<SFXVFX>().play += PlaySFX;
+    }
+
+    protected void PlaySFX()
+    {
+        sfx.Play();
+    }
+
+    protected void PlayVFX()
+    {
+        Instantiate(vfx);
     }
 
     protected void AttackAnim(Character sender, Character receiver)
