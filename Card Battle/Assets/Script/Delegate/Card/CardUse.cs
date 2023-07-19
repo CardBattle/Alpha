@@ -3,9 +3,14 @@ using UnityEngine;
 public class CardUse : MonoBehaviour
 {
     public Card card;
+    public AudioSource sfx;
+    public GameObject vfx;
+
     public void Init()
     {
         card = GetComponent<Card>();
+
+        sfx = GetComponent<AudioSource>();
         
         if (card.info.Property == PropertyType.ATTACK)
             card.info.use += AttackAnim;
@@ -17,7 +22,6 @@ public class CardUse : MonoBehaviour
 
     public virtual void Use(Character sender, Character receiver)
     {
-        //버프 - 프로토타입 구현 X 연동만 해둠.
         if (card.info.buffs.Count > 0)
         {
             bool isExist = false;
@@ -36,6 +40,16 @@ public class CardUse : MonoBehaviour
                     receiver.info.buffs.Add(buff);
             }
         }
+        sender.GetComponent<SFXVFX>().play += PlaySFX;
+        if (card.info.Property == PropertyType.ATTACK)
+            sender.GetComponent<SFXVFX>().play += delegate () { Instantiate(vfx, receiver.transform.position, Quaternion.identity); };
+        else
+            sender.GetComponent<SFXVFX>().play += delegate () { Instantiate(vfx, sender.transform.position, Quaternion.identity); };
+    }
+
+    protected void PlaySFX()
+    {
+        sfx.Play();
     }
 
     protected void AttackAnim(Character sender, Character receiver)

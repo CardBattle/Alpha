@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 2572840271167720162}
   - component: {fileID: 2572840271167720163}
   - component: {fileID: 2572840271167720161}
+  - component: {fileID: 1868476041}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Player
@@ -190,6 +191,8 @@ MonoBehaviour:
   weapon: 4
   img: {fileID: 21300000, guid: 9125c204f566db048a92ebcb64d9d14a, type: 3}
   buffs: []
+  cardDATA: {fileID: 5207043119744086873, guid: 5a6cd18f8f4105b4aae296cbc7bc594f, type: 3}
+  data: {fileID: 1453073742251471924, guid: af035b9a15a6e424ba02352d76c41956, type: 3}
   cards:
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
@@ -199,6 +202,19 @@ MonoBehaviour:
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
   - {fileID: 1234368001717940415, guid: f751c750d92869945a5e628b76305f9c, type: 3}
+--- !u!114 &1868476041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2572840271167720167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 699ac95299a9b4e49a1eba7145a5b6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawSFX: {fileID: 0}
 --- !u!1 &2572840271216764963
 GameObject:
   m_ObjectHideFlags: 0
